@@ -223,6 +223,7 @@ body {
 
 .skills .contentContainer .skillList .bar-progress {
   min-width: 52vw;
+  margin-right: 10px;
   background-color: #ececec;
   height: 10px;
 }
