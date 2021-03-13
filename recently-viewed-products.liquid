@@ -104,7 +104,7 @@
                   {{if !available}}
                     <strong class="label sold-out-label">
                       <span {% endraw %}{% if settings.enable_multilang %}data-translate="products.product.sold_out"{% endif %}>
-                      	{{ 'products.product.sold_out' | t }}{% raw %}
+                      	{% comment %}start BSS Commerce ltsp{% endcomment %}{% assign bssltspp = product | default: item | default: prod %}{% capture bssltspop %}{{ 'products.product.sold_out' | t }}{% endcapture %}{% render 'bsscommerce-login-to-see-price', product: bssltspp, old_price: bssltspop %}{% comment %}end BSS Commerce ltsp{% endcomment %}{% raw %}
                       </span>
                     </strong>
                   {{/if}}
@@ -221,21 +221,21 @@
     				{{if compare_at_price_min > price_min }} 
                       <p class="sale">
                         <span class="old-price">
-                        	<span class="price-number">{{html Shopify.formatMoney(compare_at_price_min, window.money_format)}}</span>
+                        	<span class="price-number">{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% comment %}start BSS Commerce ltsp{% endcomment %}{% assign bssltspp = product | default: item | default: prod %}{% capture bssltspop %}{% raw %}{{html Shopify.formatMoney(compare_at_price_min, window.money_format)}}{% endraw %}{% endcapture %}{% render 'bsscommerce-login-to-see-price', product: bssltspp, old_price: bssltspop %}{% comment %}end BSS Commerce ltsp{% endcomment %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}</span>
     					</span>
                         
                         <span class="special-price">
                         	{{if price_varies}}
                             {% endraw %}{% render 'varies_from' %}{% raw %}
                         	{{/if}}
-                            <span class="price-number">{{html Shopify.formatMoney(price_min, window.money_format)}}</span>
+                            <span class="price-number">{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% comment %}start BSS Commerce ltsp{% endcomment %}{% assign bssltspp = product | default: item | default: prod %}{% capture bssltspop %}{% raw %}{{html Shopify.formatMoney(price_min, window.money_format)}}{% endraw %}{% endcapture %}{% render 'bsscommerce-login-to-see-price', product: bssltspp, old_price: bssltspop %}{% comment %}end BSS Commerce ltsp{% endcomment %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}</span>
     					</span>
                       </p>
                     {{else}}
-                      <p class="regular-product">
+                      <p {% comment %}start BSS Commerce ltsp{% endcomment %}{% assign bssltspp = product | default: item | default: prod %}{% capture bssltspop %}class="regular-product"{% endcapture %}{% render 'bsscommerce-login-to-see-price', product: bssltspp, old_price: bssltspop %}{% comment %}end BSS Commerce ltsp{% endcomment %}>
                         <span>
                         	{{if price_varies}}{% endraw %}{% render 'varies_from' %}{% raw %}{{/if}}
-                            <span class="price-number">{{html Shopify.formatMoney(price_min, window.money_format)}}</span>
+                            <span class="price-number">{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% comment %}start BSS Commerce ltsp{% endcomment %}{% assign bssltspp = product | default: item | default: prod %}{% capture bssltspop %}{% raw %}{{html Shopify.formatMoney(price_min, window.money_format)}}{% endraw %}{% endcapture %}{% render 'bsscommerce-login-to-see-price', product: bssltspp, old_price: bssltspop %}{% comment %}end BSS Commerce ltsp{% endcomment %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}{% endraw %}{% raw %}</span>
     					</span>
                       </p>
                     {{/if}}
